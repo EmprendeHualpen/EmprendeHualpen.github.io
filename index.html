@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recomendación de Fondos</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="body.css">
 </head>
 <body>
     <div class="container">
@@ -47,11 +47,29 @@
                 <option value="yes">Sí</option>
                 <option value="no">No</option>
             </select>
+
+            <label for="formalized">¿Está formalizado?</label>
+            <select id="formalized" name="formalized" required>
+                <option value="">Seleccione uno</option>
+                <option value="yes">Sí</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="email">Correo:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="challenges">¿Cuál es el principal desafío que enfrentas actualmente? (Puedes seleccionar más de uno)</label>
+            <select id="challenges" name="challenges" multiple required>
+                <option value="financing">Acceso a financiamiento</option>
+                <option value="training">Capacitación y asesoría</option>
+                <option value="workspace">Espacios para trabajar/comercializar</option>
+                <option value="promotion">Difusión y promoción</option>
+            </select>
             
             <button type="submit">Enviar</button>
         </form>
         <div id="recommendationResult"></div>
     </div>
-    <script src="script.js"></script>
+    <script src="emprende.js"></script>
 </body>
 </html>
